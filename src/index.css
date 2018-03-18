@@ -1,3 +1,29 @@
+@import url("./assets/normalize.css");
+/* CSS Variables */
+
+:root {
+  /* Colors */
+  --color-primary: #273c75;
+  /* --color-primary: #F7E7CE; */
+  --color-secondary: #F1D3D1;
+  --color-black: #2E3333;
+  --color-white: #fff;
+  --color-gold: #CDA349;
+  --color-gold-lighter: #d4af61;
+  --color-light-grey: #ecf0f1;
+  --color-red: #e74c3c;
+  --color-green: #2ecc71;
+  --color-grey: #bdc3c7;
+  /* Spacing */
+  --spacing-tiny: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+  --spacing-huge: 64px;
+  /* Font Sizing */
+  --default-font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,10 +31,20 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "proxima-nova", sans-serif;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
