@@ -47,9 +47,9 @@ class Header extends Component {
       <Wrapper>
         <Logo src={logo}/>
         <nav>
-          <MobileMenu active={this.state.active ? 'is-active' : null}  />
+          <MobileMenu active={this.state.active ? 'is-active' : ''}  />
           <Menu />
-          <Hamburger active={this.state.active ? 'is-active' : null} toggleActive={this.toggleActive}/>
+          <Hamburger active={this.state.active ? 'is-active' : ''} toggleActive={this.toggleActive}/>
         </nav>
       </Wrapper>
     )

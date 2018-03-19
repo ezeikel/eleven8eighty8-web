@@ -6,6 +6,8 @@ const MenuList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: var(--spacing-large);
   text-transform: uppercase;
+  font-family: "aglet-slab", sans-serif;
+  font-size: 18px;
   @media (min-width: 768px) {
     display: grid;
   }
