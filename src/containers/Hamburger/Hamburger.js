@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   cursor: pointer;
+  z-index: 1;
   > span {
     display: block;
     margin-top: var(--spacing-tiny);

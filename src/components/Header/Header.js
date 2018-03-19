@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
 import styled from 'styled-components';
+
 import Hamburger from '../../containers/Hamburger/Hamburger';
+import Navigation from '../../containers/Navigation/Navigation';
 import logo from '../../assets/1188.svg';
 
 
@@ -21,6 +22,7 @@ const Wrapper = styled.header`
 const Logo = styled.img`
   justify-self: start;
   height: 32px;
+  z-index: 1;
 `;
 
 class Header extends Component {
@@ -39,6 +41,7 @@ class Header extends Component {
       <Wrapper>
         <Logo src={logo}/>
         <Hamburger active={this.state.active ? 'is-active' : null} toggleActive={this.toggleActive}/>
+        <Navigation active={this.state.active ? 'is-active' : null}  />
       </Wrapper>
     )
   }
