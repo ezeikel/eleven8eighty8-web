@@ -6,7 +6,7 @@ const InlineSVG = ({ src }) => (
   <SVG 
     src={src}
     preloader={<Loader />} >
-    <img src="../../assets/1188.png" />
+    <img alt="" src={src.replace(/svg/i, 'png')} />
   </SVG>
 );
 
