@@ -3,7 +3,7 @@
 
 :root {
   /* Colors */
-  --color-primary: #273c75;
+  --color-primary: #33B3A9;
   /* --color-primary: #F7E7CE; */
   --color-secondary: #F1D3D1;
   --color-black: #2E3333;
@@ -31,7 +31,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "proxima-nova", sans-serif;
+  font-family: Helvetica;
 }
 
 img {

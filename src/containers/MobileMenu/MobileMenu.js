@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
   position: fixed;
-  transform: translateX(${props => props.active === 'is-active' ? '0' : '-100vh'});
+  transform: translateY(${({ active }) => active ? '0' : '-100vh'});
   transition: all 0.3s ease-in-out;
   top: 0;
   left: 0;
@@ -12,7 +13,7 @@ const Overlay = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
 `;
 
 const MobileMenuList = styled.ul`
@@ -24,14 +25,17 @@ const MobileMenuList = styled.ul`
   margin-top: 400px;
   font-size: var(--spacing-large);
   text-align: center;
+  a {
+    color: var(--color-white);
+  }
 `;
 
-const MobileMenu = (props) => (
-  <Overlay active={props.active}>
+const MobileMenu = ({ active }) => (
+  <Overlay active={active}>
     <MobileMenuList>
-      <li>Who are we</li>
-      <li>Services</li>
-      <li>Contact</li>
+      <li><Link to={`/who-we-are`}>Who are we</Link></li>
+      <li><Link to={`/services`}>Services</Link></li>
+      <li><Link to={`/contact`}>Contact</Link></li>
     </MobileMenuList>
   </Overlay>
 );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const MenuList = styled.ul`
@@ -6,7 +7,6 @@ const MenuList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: var(--spacing-large);
   text-transform: uppercase;
-  font-family: "aglet-slab", sans-serif;
   font-size: 18px;
   @media (min-width: 768px) {
     display: grid;
@@ -15,9 +15,9 @@ const MenuList = styled.ul`
 
 const Menu = () => (
   <MenuList>
-      <li>Who are we</li>
-      <li>Services</li>
-      <li>Contact</li>
+      <li><Link to={`/who-we-are`}>Who are we</Link></li>
+      <li><Link to={`/services`}>Services</Link></li>
+      <li><Link to={`/contact`}>Contact</Link></li>
   </MenuList>
 );
 

@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
 import Header from '../../components/Header/Header';
 import Main from '../Main/Main';
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40px 1fr;
-  padding: var(--spacing-large);
+  grid-template-rows: minmax(auto, 80px) 1fr;
 `;
 
 const App = () => (
