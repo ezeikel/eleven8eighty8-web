@@ -43,7 +43,7 @@ class Header extends Component {
   render() {
     return (
       <Wrapper active={this.state.active} >
-        <Link to={`/`} onClick={this.toggleActive}><InlineSVG src={Logo} /></Link>
+        <Link to={`/`} onClick={this.state.active ? this.toggleActive : null}><InlineSVG src={Logo} /></Link>
         <nav>
           <MobileMenu active={this.state.active} toggleActive={this.toggleActive} />
           <Menu active={this.state.active} />
