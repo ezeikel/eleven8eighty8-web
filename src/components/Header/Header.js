@@ -25,7 +25,6 @@ const Wrapper = styled.header`
   }
   a {
     height: 100%;
-    max-height: var(--header-height);
     z-index: 1;
   }
 `;
