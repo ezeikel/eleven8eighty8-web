@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import Hamburger from '../../containers/Hamburger/Hamburger';
 import MobileMenu from '../../containers/MobileMenu/MobileMenu';
 import Menu from '../../containers/Menu/Menu';
-import InlineSVG from '../../containers/InlineSVG/InlineSVG';
-import Logo from '../../assets/1188.svg';
+import LogoShort from '../../containers/LogoShort/LogoShort';
 
 const Wrapper = styled.header`
   display: grid;
@@ -43,7 +42,7 @@ class Header extends Component {
   render() {
     return (
       <Wrapper active={this.state.active} >
-        <Link to={`/`} onClick={this.state.active ? this.toggleActive : null}><InlineSVG src={Logo} /></Link>
+        <Link to={`/`} onClick={this.state.active ? this.toggleActive : null}><LogoShort /></Link>
         <nav>
           <MobileMenu active={this.state.active} toggleActive={this.toggleActive} />
           <Menu active={this.state.active} />
