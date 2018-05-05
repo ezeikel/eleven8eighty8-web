@@ -2,7 +2,7 @@ import React from 'react';
 import SVG from 'react-inlinesvg';
 import Loader from '../Loader/Loader';
 
-const Logo = ({ src }) => (
+const InlineSVG = ({ src }) => (
   <SVG 
     src={src}
     preloader={<Loader />} >
@@ -10,4 +10,4 @@ const Logo = ({ src }) => (
   </SVG>
 );
 
-export default Logo;
+export default InlineSVG;

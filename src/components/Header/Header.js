@@ -4,10 +4,8 @@ import styled from 'styled-components';
 import Hamburger from '../../containers/Hamburger/Hamburger';
 import MobileMenu from '../../containers/MobileMenu/MobileMenu';
 import Menu from '../../containers/Menu/Menu';
-import InlineSVG from '../../containers/Logo/Logo';
+import InlineSVG from '../../containers/InlineSVG/InlineSVG';
 import Logo from '../../assets/1188.svg';
-import logoBlack from '../../assets/1188-black.png';
-import logoWhite from '../../assets/1188-white.png';
 
 const Wrapper = styled.header`
   display: grid;
@@ -31,11 +29,6 @@ const Wrapper = styled.header`
   }
 `;
 
-// const Logo = styled.img`
-//   width: 64px;
-//   z-index: 1;
-// `;
-
 class Header extends Component {
   state = {
     active: false
@@ -50,12 +43,11 @@ class Header extends Component {
   render() {
     return (
       <Wrapper active={this.state.active} >
-        {/* <Logo src={this.state.active ? logoWhite : logoBlack}/> */}
-        <Link to={`/`}><InlineSVG to={`/`} src={Logo} /></Link>
+        <Link to={`/`} onClick={this.toggleActive}><InlineSVG src={Logo} /></Link>
         <nav>
-          <MobileMenu active={this.state.active} toggleActive={this.toggleActive}/>
+          <MobileMenu active={this.state.active} toggleActive={this.toggleActive} />
           <Menu active={this.state.active} />
-          <Hamburger active={this.state.active} toggleActive={this.toggleActive}/>
+          <Hamburger active={this.state.active} toggleActive={this.toggleActive} />
         </nav>
       </Wrapper>
     )
