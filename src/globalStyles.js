@@ -1,4 +1,6 @@
-@import url("./assets/normalize.css");
+import { injectGlobal, keyframes } from 'styled-components';
+
+export default injectGlobal`
 /* CSS Variables */
 
 :root {
@@ -55,3 +57,16 @@ ul {
   padding-left: 0;
   margin: 0;
 }
+`;
+
+export const dropBounceKeyframe = keyframes`
+  0 % {
+    transform: translateY(-100vh);
+  }
+  50 % {
+    transform: translateY(25vh);
+  }
+  100 % {
+    transform: translateY(0);
+  }
+`;
