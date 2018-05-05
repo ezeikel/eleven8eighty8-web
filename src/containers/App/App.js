@@ -6,7 +6,7 @@ import Main from '../Main/Main';
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(auto, 80px) 1fr;
+  grid-template-rows: minmax(auto, var(--header-height)) 1fr;
 `;
 
 const App = () => (

@@ -22,6 +22,8 @@
   --spacing-huge: 64px;
   /* Font Sizing */
   --default-font-size: 16px;
+
+  --header-height: 80px;
 }
 
 * {
