@@ -14,6 +14,9 @@ const Overlay = styled.div`
   justify-items: center;
   align-items: center;
   background-color: var(--color-primary);
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const MobileMenuList = styled.ul`
@@ -31,15 +34,13 @@ const MobileMenuList = styled.ul`
 `;
 
 const MobileMenu = ({ active, toggleActive }) => (
-  active ?
-    <Overlay active={active}>
-      <MobileMenuList>
-        <li><Link onClick={toggleActive} to={`/who-we-are`}>Who are we</Link></li>
-        <li><Link onClick={toggleActive} to={`/services`}>Services</Link></li>
-        <li><Link onClick={toggleActive} to={`/contact`}>Contact</Link></li>
-      </MobileMenuList>
-    </Overlay>
-  : ''
+  <Overlay active={active}>
+    <MobileMenuList>
+      <li><Link onClick={toggleActive} to={`/who-we-are`}>Who are we</Link></li>
+      <li><Link onClick={toggleActive} to={`/services`}>Services</Link></li>
+      <li><Link onClick={toggleActive} to={`/contact`}>Contact</Link></li>
+    </MobileMenuList>
+  </Overlay>
 );
 
 export default MobileMenu;
