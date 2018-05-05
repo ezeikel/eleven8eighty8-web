@@ -17,7 +17,7 @@ const Wrapper = styled.header`
   box-shadow: 0 2px 1.5rem 0 rgba(0,0,0,.1);
   svg {
     width: 64px;
-    max-height: 100%;
+    max-height: var(--header-height);
     g {
       transition: fill 0.3s ease-in-out;
       fill: var(--color-${({ active }) => active ? 'white' : 'black'});
