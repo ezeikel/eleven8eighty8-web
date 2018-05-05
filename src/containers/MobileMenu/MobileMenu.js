@@ -30,14 +30,16 @@ const MobileMenuList = styled.ul`
   }
 `;
 
-const MobileMenu = ({ active }) => (
-  <Overlay active={active}>
-    <MobileMenuList>
-      <li><Link to={`/who-we-are`}>Who are we</Link></li>
-      <li><Link to={`/services`}>Services</Link></li>
-      <li><Link to={`/contact`}>Contact</Link></li>
-    </MobileMenuList>
-  </Overlay>
+const MobileMenu = ({ active, toggleActive }) => (
+  active ?
+    <Overlay active={active}>
+      <MobileMenuList>
+        <li><Link onClick={toggleActive} to={`/who-we-are`}>Who are we</Link></li>
+        <li><Link onClick={toggleActive} to={`/services`}>Services</Link></li>
+        <li><Link onClick={toggleActive} to={`/contact`}>Contact</Link></li>
+      </MobileMenuList>
+    </Overlay>
+  : ''
 );
 
 export default MobileMenu;

@@ -13,12 +13,15 @@ const MenuList = styled.ul`
   }
 `;
 
-const Menu = () => (
-  <MenuList>
-      <li><Link to={`/who-we-are`}>Who are we</Link></li>
-      <li><Link to={`/services`}>Services</Link></li>
-      <li><Link to={`/contact`}>Contact</Link></li>
-  </MenuList>
+const Menu = ({ active }) => (
+  //TODO: This is still rendering on mobile when not active.
+  !active ?
+    <MenuList>
+        <li><Link to={`/who-we-are`}>Who are we</Link></li>
+        <li><Link to={`/services`}>Services</Link></li>
+        <li><Link to={`/contact`}>Contact</Link></li>
+    </MenuList>
+  : ''
 );
 
 export default Menu;

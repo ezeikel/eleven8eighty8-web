@@ -38,8 +38,8 @@ class Header extends Component {
       <Wrapper>
         <Logo src={this.state.active ? logoWhite : logoBlack}/>
         <nav>
-          <MobileMenu active={this.state.active}  />
-          <Menu />
+          <MobileMenu active={this.state.active} toggleActive={this.toggleActive}/>
+          <Menu active={this.state.active} />
           <Hamburger active={this.state.active} toggleActive={this.toggleActive}/>
         </nav>
       </Wrapper>
