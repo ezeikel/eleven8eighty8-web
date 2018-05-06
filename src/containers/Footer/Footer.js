@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import SocialLinks from '../SocialLinks/SocialLinks';
 
@@ -34,9 +35,9 @@ const Footer = () => (
     <SocialLinks />
     <p>&copy; {new Date().getFullYear()} Eleven 8Eighty8. All Rights Reserved.</p>
     <ul>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">RSS Feed</a></li>
+      <li><Link to={`/privacy-policy`}>Privacy Policy</Link></li>
+      <li><Link to={`/terms-of-use`}>Terms of Use</Link></li>
+      <li><Link to={`/rss-feed`}>RSS Feed</Link></li>
     </ul>
   </Wrapper>
 );

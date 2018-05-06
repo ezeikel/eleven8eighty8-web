@@ -22,11 +22,11 @@ const Overlay = styled.div`
 const MobileMenuList = styled.ul`
   display: grid;
   justify-content: center;
-  align-content: start;
+  align-content: center;
   grid-row-gap: var(--spacing-large);
   height: 100%;
-  margin-top: 400px;
-  font-size: var(--spacing-large);
+  transition: all 0.3s ease-in-out;
+  font-size: var(--spacing-huge);
   text-align: center;
   a {
     color: var(--color-white);
