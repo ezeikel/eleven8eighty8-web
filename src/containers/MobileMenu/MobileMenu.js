@@ -26,7 +26,7 @@ const MobileMenuList = styled.ul`
   grid-row-gap: var(--spacing-large);
   height: 100%;
   transition: all 0.3s ease-in-out;
-  font-size: var(--spacing-huge);
+  font-size: 52px;
   text-align: center;
   a {
     color: var(--color-white);
