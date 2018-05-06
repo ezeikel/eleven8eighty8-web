@@ -5,7 +5,7 @@ const LogoShort = () => (
         <title>Group</title>
         <desc>Created with Sketch.</desc>
         <defs></defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="1188_logo_colour_option1" transform="translate(-95.000000, -169.000000)" fill="#2E3333">
                 <g id="Group" transform="translate(95.000000, 169.000000)">
                     <polygon id="Fill-4" points="0.217 0.287 0.217 21.679 13.343 21.679 13.343 139.257 0.217 139.257 0.217 159.386 46.809 159.386 46.809 139.257 34.112 139.257 34.112 0.287"></polygon>
