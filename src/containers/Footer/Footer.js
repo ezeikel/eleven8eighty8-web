@@ -1,45 +1,104 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import SocialLinks from '../SocialLinks/SocialLinks';
+import LogoShort from '../../containers/LogoShort/LogoShort';
 
-const Wrapper = styled.footer `
+const Wrapper = styled.footer`
   display: grid;
-  grid-template-rows: 54px auto auto;
-  padding: var(--spacing-medium);
-  background-color: #000;
-  color: #666;
-  padding-top: var(--spacing-large);
-  padding-bottom: var(--spacing-large);
+  grid-template-rows: 80px auto 1fr;
+  place-items: center;
+  grid-row-gap: var(--spacing-large);
   padding: var(--spacing-large);
-  font-size: 13px;
-  line-height: 17px;
-  text-align: center;
-  a, a:link, a:visited, a:active {
-    color: #666;
+  background-color: var(--color-black);
+  span {
+    color: var(--color-white);
+    span span {
+      color: var(--color-red);
+    }
   }
-  ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    li {
-      padding: 0 8px 0 10px;
-    }
-    li + li {
-      border-left: 1px solid #666;
-    }
+  @media (min-width: 768px) {
+    grid-row-gap: var(--spacing-huge);
+    padding: var(--spacing-huge);
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: var(--spacing-medium);
+  }
+`;
+
+const Copy = styled.span`
+  display: grid;
+  grid-row-gap: var(--spacing-medium);
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  a,
+  a:link,
+  a:active,
+  a:visited,
+  a:focus {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+  @media (min-width: 768px) {
+    grid-row: 2 / -1;
+    align-self: end;
+  }
+`;
+
+const StyledLogo = styled(LogoShort)`
+  .logo {
+    fill: var(--color-white);
+  }
+  display: block;
+  height: 60px;
+  @media (min-width: 768px) {
+    grid-row: 1 / -1;
+    grid-column: 1 / span 1;
+  }
+`;
+
+const SocialLinks = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  width: 100%;
+  margin: 0;
+  a {
+    color: var(--color-white);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 80px);
+    width: auto;
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    align-self: end;
   }
 `;
 
 const Footer = () => (
   <Wrapper>
-    <SocialLinks />
-    <p>&copy; {new Date().getFullYear()} Eleven 8Eighty8. All Rights Reserved.</p>
-    <ul>
-      <li><Link to={`/privacy-policy`}>Privacy Policy</Link></li>
-      <li><Link to={`/terms-of-use`}>Terms of Use</Link></li>
-      <li><Link to={`/rss-feed`}>RSS Feed</Link></li>
-    </ul>
+    <StyledLogo />
+    <SocialLinks>
+      <li class="instagram">
+        <a href="https://twitter.com/eleven8eighty8"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      </li>
+      <li class="facebook">
+        <a href="https://facebook.com/eleven8eighty8"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+      </li>
+      <li class="instagram">
+        <a href="https://instagram.com/eleven8eighty8"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+      </li>
+      <li class="email">
+        <a href="https://linkedin.com/eleven8eighty8"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+      </li>
+    </SocialLinks>
+    <Copy>
+      <span>All rights reserved &copy; {new Date().getFullYear()}. Eleven 8Eighty8</span>
+      <span>Made with <span>♡</span> in South London.</span>
+    </Copy>
   </Wrapper>
+
+
 );
 
 export default Footer;
