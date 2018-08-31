@@ -13,7 +13,7 @@ const Wrapper = styled.header`
   justify-items: center;
   align-items: center;
   position: relative;
-  padding: var(--spacing-medium);
+  padding: var(--spacing-medium) var(--spacing-large);
   box-shadow: 0 2px 1.5rem 0 rgba(0,0,0,.1);
   svg {
     width: 64px;
