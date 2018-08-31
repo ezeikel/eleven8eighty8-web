@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
+  padding-top: 160px;
   position: fixed;
   transform: translateY(${({ active }) => active ? '0' : '-100vh'});
   transition: all 0.3s ease-in-out;
@@ -22,23 +23,30 @@ const Overlay = styled.div`
 const MobileMenuList = styled.ul`
   display: grid;
   justify-content: center;
-  align-content: center;
+  align-content: start;
   grid-row-gap: var(--spacing-large);
   height: 100%;
   transition: all 0.3s ease-in-out;
-  font-size: 52px;
+  font-weight: 300;
   text-align: center;
   a {
     color: var(--color-white);
   }
 `;
 
+const StyledLink = styled(Link)`
+  font-size: 36px;
+  line-height: 55px;
+  text-transform: uppercase;
+`;
+
 const MobileMenu = ({ active, toggleActive }) => (
   <Overlay active={active}>
     <MobileMenuList>
-      <li><Link onClick={toggleActive} to={`/who-we-are`}>Who are we</Link></li>
-      <li><Link onClick={toggleActive} to={`/services`}>Services</Link></li>
-      <li><Link onClick={toggleActive} to={`/contact`}>Contact</Link></li>
+      <li><StyledLink onClick={toggleActive} to={`/`}>Home</StyledLink></li>
+      <li><StyledLink onClick={toggleActive} to={`/who-we-are`}>Who are we</StyledLink></li>
+      <li><StyledLink onClick={toggleActive} to={`/services`}>Services</StyledLink></li>
+      <li><StyledLink onClick={toggleActive} to={`/contact`}>Contact</StyledLink></li>
     </MobileMenuList>
   </Overlay>
 );

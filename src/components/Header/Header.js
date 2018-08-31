@@ -29,6 +29,11 @@ const Wrapper = styled.header`
   }
 `;
 
+const StyledLink = styled(Link)`
+  display: grid;
+  place-items: center;
+`;
+
 class Header extends Component {
   state = {
     active: false
@@ -43,7 +48,7 @@ class Header extends Component {
   render() {
     return (
       <Wrapper active={this.state.active} >
-        <Link to={`/`} onClick={this.state.active ? this.toggleActive : null}><LogoShort /></Link>
+        <StyledLink to={`/`} onClick={this.state.active ? this.toggleActive : null}><LogoShort /></StyledLink>
         <nav>
           <MobileMenu active={this.state.active} toggleActive={this.toggleActive} />
           <Menu active={this.state.active} />

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const MenuList = styled.ul`
   display: none;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, auto);
   grid-column-gap: var(--spacing-large);
   text-transform: uppercase;
   font-size: 18px;
@@ -17,6 +17,7 @@ const Menu = ({ active }) => (
   //TODO: This is still rendering on mobile when not active.
   !active ?
     <MenuList>
+        <li><Link to={`/`}>Home</Link></li>
         <li><Link to={`/who-we-are`}>Who are we</Link></li>
         <li><Link to={`/services`}>Services</Link></li>
         <li><Link to={`/contact`}>Contact</Link></li>
