@@ -15,11 +15,6 @@ const Wrapper = styled.header`
   position: relative;
   padding: var(--spacing-medium) var(--spacing-large);
   background-color: var(--color-white);
-  // background-image: linear-gradient(
-  //   90deg,
-  //   #86E1D8,
-  //   var(--color-primary)
-  // );
   box-shadow: 0 2px 1.5rem 0 rgba(0,0,0,.1);
   svg {
     width: 64px;

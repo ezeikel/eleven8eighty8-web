@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
-  padding-top: calc(var(--header-height) * 2);
+  padding-top: var(--header-height);
   position: fixed;
   transform: translateY(${({ active }) => active ? '0' : '-100vh'});
   transition: all 0.3s ease-in-out;
