@@ -5,27 +5,35 @@ export default injectGlobal`
 
 :root {
   /* Colors */
-  --color-primary: #33B3A9;
-  /* --color-primary: #F7E7CE; */
-  --color-secondary: #F1D3D1;
+  --color-primary: #6CC7BE;
+  --color-secondary: #030D54;
+  --color-tertiary: #4629D3;
+  --color-radical-red: #FF3D63;
+  --color-aquamarine: #62FFD3;
+  --color-bittersweet: #FF7264;
   --color-black: #2E3333;
-  --color-white: #fff;
+  --color-white: #FFFFFF;
   --color-gold: #CDA349;
-  --color-gold-lighter: #d4af61;
-  --color-light-grey: #ecf0f1;
-  --color-red: #e74c3c;
-  --color-green: #2ecc71;
-  --color-grey: #bdc3c7;
+  --color-gold-lighter: #D4AF61;
+  --color-light-grey: #ECF0F1;
+  --color-red: #E74C3C;
+  --color-green: #2ECC71;
+  --color-grey: #BDC3C7;
+
   /* Spacing */
   --spacing-tiny: 4px;
-  --spacing-small: 8px;
-  --spacing-medium: 16px;
-  --spacing-large: 32px;
-  --spacing-huge: 64px;
+  --spacing-small: calc(var(--spacing-tiny) * 2); //8px
+  --spacing-medium: calc(var(--spacing-small) * 2); //16px
+  --spacing-large: calc(var(--spacing-medium) * 2); //32px
+  --spacing-huge: calc(var(--spacing-large) * 2); //64px
+  --spacing-gargantuan: calc(var(--spacing-huge) * 2); //128px
+
   /* Font Sizing */
   --default-font-size: 16px;
 
-  --header-height: 80px;
+  --default-font-family: 'neuzeit-grotesk';
+
+  --header-height: 120px;
 }
 
 * {
@@ -35,7 +43,7 @@ export default injectGlobal`
 body {
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
+  font-family: var(--default-font-family);
 }
 
 img {
@@ -46,6 +54,10 @@ img {
 svg {
   max-height: 100%;
   max-width: 100%;;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
 }
 
 a {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
-  padding-top: 160px;
+  padding-top: calc(var(--header-height) * 2);
   position: fixed;
   transform: translateY(${({ active }) => active ? '0' : '-100vh'});
   transition: all 0.3s ease-in-out;
@@ -38,6 +38,7 @@ const StyledLink = styled(Link)`
   font-size: 36px;
   line-height: 55px;
   text-transform: uppercase;
+  font-weight: bold;
 `;
 
 const MobileMenu = ({ active, toggleActive }) => (

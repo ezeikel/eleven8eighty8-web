@@ -13,14 +13,19 @@ const MenuList = styled.ul`
   }
 `;
 
+const StyledLink = styled(Link)`
+  color: var(--color-black);
+  font-weight: bold;
+`;
+
 const Menu = ({ active }) => (
   //TODO: This is still rendering on mobile when not active.
   !active ?
     <MenuList>
-        <li><Link to={`/`}>Home</Link></li>
-        <li><Link to={`/who-we-are`}>Who are we</Link></li>
-        <li><Link to={`/services`}>Services</Link></li>
-        <li><Link to={`/contact`}>Contact</Link></li>
+        <li><StyledLink to={`/`}>Home</StyledLink></li>
+        <li><StyledLink to={`/who-we-are`}>Who are we</StyledLink></li>
+        <li><StyledLink to={`/services`}>Services</StyledLink></li>
+        <li><StyledLink to={`/contact`}>Contact</StyledLink></li>
     </MenuList>
   : ''
 );
