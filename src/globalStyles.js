@@ -72,6 +72,86 @@ ul {
   padding-left: 0;
   margin: 0;
 }
+
+button {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  font-size: var(--default-font-size);
+}
+  
+/* Forms */
+
+select {
+  background-color: var(--color-white);
+}
+
+fieldset {
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: var(--color-light-grey);
+  /*font-weight: 300;*/
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: var(--color-light-grey);
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: var(--color-light-grey);
+  font-weight: 300;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: var(--color-light-grey);
+  font-weight: 300;
+}
+
+input, textarea {
+  font-family: var(--font-family-default);
+  font-size: var(--default)
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea, select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 1em;
+  border: 1px solid #ecf0f1;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  font-weight: 300;
+}
+
+button[type="submit"] {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 15px 90px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transition: background-color 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+button[type="submit"][disabled] {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
 `;
 
 export const dropBounceKeyframe = keyframes`

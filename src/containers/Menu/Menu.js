@@ -22,6 +22,15 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledOutboundLink = styled.a`
+  color: var(--color-black);
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: var(--color-primary);
+  }
+`;
+
 const Menu = ({ active }) => (
   //TODO: This is still rendering on mobile when not active.
   !active ?
@@ -29,7 +38,7 @@ const Menu = ({ active }) => (
         <li><StyledLink to={`/`}>Home</StyledLink></li>
         <li><StyledLink to={`/who-we-are`}>Who are we</StyledLink></li>
         <li><StyledLink to={`/services`}>Services</StyledLink></li>
-        <li><StyledLink to={`/contact`}>Contact</StyledLink></li>
+        <li><StyledOutboundLink href="/home#contact">Contact</StyledOutboundLink></li>
     </MenuList>
   : ''
 );
