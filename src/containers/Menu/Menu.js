@@ -16,6 +16,10 @@ const MenuList = styled.ul`
 const StyledLink = styled(Link)`
   color: var(--color-black);
   font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: var(--color-primary);
+  }
 `;
 
 const Menu = ({ active }) => (

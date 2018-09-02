@@ -44,6 +44,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--default-font-family);
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 img {
