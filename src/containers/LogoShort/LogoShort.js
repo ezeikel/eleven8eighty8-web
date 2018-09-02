@@ -2,7 +2,7 @@ import React from 'react';
 
 const LogoShort = ({ className }) => (
     <svg className={className} viewBox="0 0 307 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <g class="logo" transform="translate(-95.000000, -169.000000)">
+        <g className="logo" transform="translate(-95.000000, -169.000000)">
             <g id="Group" transform="translate(95.000000, 169.000000)">
                 <polygon id="Fill-4" points="0.217 0.287 0.217 21.679 13.343 21.679 13.343 139.257 0.217 139.257 0.217 159.386 46.809 159.386 46.809 139.257 34.112 139.257 34.112 0.287"></polygon>
                 <polygon id="Fill-5" points="62.48 0.287 62.48 21.679 75.609 21.679 75.609 139.257 62.48 139.257 62.48 159.386 109.072 159.386 109.072 139.257 96.379 139.257 96.379 0.287"></polygon>

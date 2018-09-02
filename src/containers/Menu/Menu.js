@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 const MenuList = styled.ul`
@@ -22,7 +23,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledOutboundLink = styled.a`
+const StyledHashLink = styled(HashLink)`
   color: var(--color-black);
   font-weight: bold;
   transition: color 0.3s ease-in-out;
@@ -38,7 +39,7 @@ const Menu = ({ active }) => (
         <li><StyledLink to={`/`}>Home</StyledLink></li>
         <li><StyledLink to={`/who-we-are`}>Who are we</StyledLink></li>
         <li><StyledLink to={`/services`}>Services</StyledLink></li>
-        <li><StyledOutboundLink href="/home#contact">Contact</StyledOutboundLink></li>
+        <li><StyledHashLink to={`/#contact`}>Contact</StyledHashLink></li>
     </MenuList>
   : ''
 );

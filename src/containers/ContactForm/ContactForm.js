@@ -37,21 +37,21 @@ const SubmitButton = styled.button`
   }
 `;
 
-const SubmitMessage = styled.div `
-  padding: var(--spacing-medium);
-  margin-bottom: var(--spacing-large);
-  text-align: center;
-  p {
-    color: var(--color-white);
-    margin: 0;
-  }
-  &--success {
-    background-color: var(--color-green);
-  }
-  span {
-    text-decoration: underline;
-  }
-`;
+// const SubmitMessage = styled.div `
+//   padding: var(--spacing-medium);
+//   margin-bottom: var(--spacing-large);
+//   text-align: center;
+//   p {
+//     color: var(--color-white);
+//     margin: 0;
+//   }
+//   &--success {
+//     background-color: var(--color-green);
+//   }
+//   span {
+//     text-decoration: underline;
+//   }
+// `;
 
 
 const ContactForm = ({ className }) => (
@@ -59,25 +59,25 @@ const ContactForm = ({ className }) => (
     <DoubleFormfield>
       <Fieldset>
         <Label htmlFor="first-name">First Name</Label>
-        <input type="text" name="first-name" placeholder="Biggie" autocomplte="off" required />
+        <input type="text" name="first-name" placeholder="Biggie" autoComplete="off" required />
       </Fieldset>
       <Fieldset>
         <Label htmlFor="last-name">Last Name</Label>
-        <input type="text" name="last-name" placeholder="Smalls" autocomplte="off" required />
+        <input type="text" name="last-name" placeholder="Smalls" autoComplete="off" required />
       </Fieldset>
     </DoubleFormfield>
     <SingleFormfield>
       <Fieldset>
         <Label htmlFor="email">Email</Label>
-        <input autocapitalize="off" autocomplete="off" email name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="biggie@smalls.com" required type="email" />
+        <input autoCapitalize="off" autoComplete="off" email="true" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="biggie@smalls.com" required type="email" />
       </Fieldset>
       <Fieldset>
         <Label htmlFor="tel">Phone number</Label>
-        <input autocomplete="off" maxlength="11" minlength="11" name="tel" placeholder="07953005302" required type="tel" />
+        <input autoComplete="off" maxLength="11" minLength="11" name="tel" placeholder="07953005302" required type="tel" />
       </Fieldset>
       <Fieldset>
         <Label htmlFor="message">Message</Label>
-        <textarea autocomplete="off" maxlength="160" name="message" placeholder="Hi, I need some dope work done. Can you help ASAP?" type="text" />
+        <textarea autoComplete="off" maxLength="160" name="message" placeholder="Hi, I need some dope work done. Can you help ASAP?" type="text" />
       </Fieldset>
       <Fieldset>
         <SubmitButton type="submit" disabled>Send</SubmitButton>

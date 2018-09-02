@@ -11,7 +11,6 @@ const Main = () => (
       <Route exact path="/" component={Home} />
       <Route path="/who-we-are" component={About} />
       <Route path="/services" component={Services} />
-      <Route path="/contact" component={Contact} />
     </Switch>
   </main>
 );

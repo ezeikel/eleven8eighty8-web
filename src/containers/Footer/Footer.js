@@ -79,17 +79,17 @@ const Footer = () => (
   <Wrapper>
     <StyledLogo />
     <SocialLinks>
-      <li class="instagram">
-        <a href="https://twitter.com/eleven8eighty8"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <li>
+        <a href="https://twitter.com/eleven8eighty8"><i className="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
       </li>
-      <li class="facebook">
-        <a href="https://facebook.com/eleven8eighty8"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+      <li>
+        <a href="https://instagram.com/eleven8eighty8"><i className="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
       </li>
-      <li class="instagram">
-        <a href="https://instagram.com/eleven8eighty8"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+      <li>
+        <a href="https://facebook.com/eleven8eighty8"><i className="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
       </li>
-      <li class="email">
-        <a href="https://linkedin.com/eleven8eighty8"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+      <li>
+        <a href="https://linkedin.com/eleven8eighty8"><i className="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
       </li>
     </SocialLinks>
     <Copy>

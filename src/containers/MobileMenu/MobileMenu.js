@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 const Overlay = styled.div`
@@ -42,13 +43,20 @@ const StyledLink = styled(Link)`
   font-weight: bold;
 `;
 
+const StyledHashLink = styled(HashLink)`
+  font-size: 36px;
+  line-height: 55px;
+  text-transform: uppercase;
+  font-weight: bold;
+`;
+
 const MobileMenu = ({ active, toggleActive }) => (
   <Overlay active={active}>
     <MobileMenuList>
       <li><StyledLink onClick={toggleActive} to={`/`}>Home</StyledLink></li>
       <li><StyledLink onClick={toggleActive} to={`/who-we-are`}>Who are we</StyledLink></li>
       <li><StyledLink onClick={toggleActive} to={`/services`}>Services</StyledLink></li>
-      <li><StyledLink onClick={toggleActive} to={`/contact`}>Contact</StyledLink></li>
+      <li><StyledHashLink onClick={toggleActive} to={`/#contact`}>Contact</StyledHashLink></li>
     </MobileMenuList>
   </Overlay>
 );
