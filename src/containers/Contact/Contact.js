@@ -12,12 +12,12 @@ const Wrapper = styled.div `
 `;
 
 const Title = styled.h2 `
-  font-size: 42px;
+  font-size: 48px;
   line-height: 1;
   text-align: center;
   color: var(--color-secondary);
   @media (min-width: 768px) {
-    font-size: 48px;
+    font-size: 56px;
     grid-column: 1 / span 1;
     text-align: left;
   }
