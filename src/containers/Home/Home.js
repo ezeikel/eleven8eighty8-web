@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Contact from '../Contact/Contact';
+import Projects from '../Projects/Projects';
 
 const Wrapper = styled.div `
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: repeat(5, auto);
   grid-row-gap: var(--spacing-huge);
   padding: 0 var(--spacing-large);
 `;
@@ -62,15 +63,21 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledContact = styled(Contact)`
+const StyledProjects = styled(Projects)`
+  grid-row: 4 / span 1
   grid-column: 1 / -1;
 `;
 
+const StyledContact = styled(Contact)`
+  grid-row: 5 / -1
+  grid-column: 1 / -1;
+`;
 const Home = () => (
   <Wrapper>
     <TagLine>We Discover, Design &amp; Build Digital Experiences to Help Brands.</TagLine>
     <StyledLink to={`/who-we-are`}>Learn More</StyledLink>
     <SubTagLine>A Creative Digital Agency specialising in Web Design and Development, we combine innovation with digital craftmanship to help brands fulfill their potential.</SubTagLine>
+    <StyledProjects />
     <StyledContact />
   </Wrapper>
 );
