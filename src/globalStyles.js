@@ -34,6 +34,8 @@ export default injectGlobal`
   --default-font-family: 'neuzeit-grotesk';
 
   --header-height: 120px;
+
+  --default-border-radius: 4px;
 }
 
 * {
