@@ -13,6 +13,7 @@ const Wrapper = styled.div `
 
 const Title = styled.h2 `
   font-size: 42px;
+  line-height: 1;
   text-align: center;
   color: var(--color-secondary);
   @media (min-width: 768px) {
@@ -48,7 +49,7 @@ const Contact = ({ className }) => (
     <Title>Holla.</Title>
     <Copy>
       <p>
-        Send us a quick message and we'll get back to you as soon as we can. The more detail the better, but if you're still not 100% sure on all the specifics, thats fine too! Alternatively you can shoot us an email at <a href="mailto:info@eleven8eighty8.com">info@eleven8eighty8.com</a>.
+        Great idea for the next big thing? Let us help you bring it to life. Send us a quick message and we'll get back to you as soon as we can. The more detail the better, but if you're still not 100% sure on all the specifics, thats fine too. Alternatively you can shoot us an email at <a href="mailto:info@eleven8eighty8.com">info@eleven8eighty8.com</a>.
       </p>
     </Copy>
     <StyledContactForm />

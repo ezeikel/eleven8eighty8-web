@@ -6,7 +6,7 @@ import Contact from '../Contact/Contact';
 const Wrapper = styled.div `
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-row-gap: var(--spacing-huge);
   padding: 0 var(--spacing-large);
 `;

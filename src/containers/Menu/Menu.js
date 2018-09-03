@@ -37,8 +37,8 @@ const Menu = ({ active }) => (
   !active ?
     <MenuList>
         <li><StyledLink to={`/`}>Home</StyledLink></li>
-        <li><StyledLink to={`/who-we-are`}>Who are we</StyledLink></li>
         <li><StyledLink to={`/services`}>Services</StyledLink></li>
+        <li><StyledLink to={`/who-we-are`}>Who are we</StyledLink></li>
         <li><StyledHashLink to={`/#contact`}>Contact</StyledHashLink></li>
     </MenuList>
   : ''

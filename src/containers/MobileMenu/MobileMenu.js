@@ -54,8 +54,8 @@ const MobileMenu = ({ active, toggleActive }) => (
   <Overlay active={active}>
     <MobileMenuList>
       <li><StyledLink onClick={toggleActive} to={`/`}>Home</StyledLink></li>
-      <li><StyledLink onClick={toggleActive} to={`/who-we-are`}>Who are we</StyledLink></li>
       <li><StyledLink onClick={toggleActive} to={`/services`}>Services</StyledLink></li>
+      <li><StyledLink onClick={toggleActive} to={`/who-we-are`}>Who are we</StyledLink></li>
       <li><StyledHashLink onClick={toggleActive} to={`/#contact`}>Contact</StyledHashLink></li>
     </MobileMenuList>
   </Overlay>
