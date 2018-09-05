@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   display: grid;
-  grid-gap: var(--spacing-large) 0;
+  grid-gap: var(--spacing-huge) 0;
   @media (min-width: 768px) {
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -27,7 +27,8 @@ const Title = styled.h2`
 
 const Project = styled.div`
   display: grid;
-  grid-template-rows: repeat(2, 350px);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: var(--spacing-huge);
   @media (min-width: 768px) {
     grid-column: 2 / -1;
     grid-template-columns: repeat(2, 1fr);
@@ -38,7 +39,6 @@ const Project = styled.div`
 const Copy = styled.div`
   display: grid;
   place-items: center;
-  padding: var(--spacing-large);
   font-size: 32px;
   @media (min-width: 768px) {
     grid-column: ${({ direction }) => direction === 'reverse' ? ` 2 / span 1`  : `1 / span 1`};
@@ -53,6 +53,7 @@ const Image = styled.div`
   color: var(--color-white);
   font-weight: bold;
   font-size: 52px;
+  min-height: 300px;
   @media (min-width: 768px) {
     grid-row: 1 / -1;
     grid-column: ${({ direction }) => direction === 'reverse' ? ` 1 / span 1`  : `2 / span 1`};    
