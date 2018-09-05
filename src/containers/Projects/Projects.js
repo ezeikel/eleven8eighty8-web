@@ -5,8 +5,10 @@ const Wrapper = styled.div`
   display: grid;
   grid-gap: var(--spacing-large) 0;
   @media (min-width: 768px) {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-gap: 0 var(--spacing-large);
+    min-height: 100vh;
   }
 `;
 
@@ -19,37 +21,71 @@ const Title = styled.h2`
     writing-mode: vertical-rl;
     font-size: 72px;
     grid-column: 1 / span 1;
+    grid-row: 1 / -1;
   }
 `;
 
-const ProjectsWrapper = styled.section`
-  grid-column: 2 / -1;
+const Project = styled.div`
   display: grid;
-  grid-template-rows: repeat(3, 300px);
-  grid-gap: var(--spacing-large) 0;
-  div {
-    background-color: var(--color-bittersweet);
-    display: grid;
-    place-items: center;
-    color: var(--color-white);
-    font-size: 28px;
-
-  }
+  grid-template-rows: repeat(2, 350px);
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-column: 2 / -1;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-gap: 0 var(--spacing-large);
+  }
+`;
+
+const Copy = styled.div`
+  display: grid;
+  place-items: center;
+  padding: var(--spacing-large);
+  font-size: 32px;
+  @media (min-width: 768px) {
+    grid-column: ${({ direction }) => direction === 'reverse' ? ` 2 / span 1`  : `1 / span 1`};
+    padding: var(--spacing-huge);
+  }
+`;
+
+const Image = styled.div`
+  display: grid;
+  place-items: center;
+  background-color: var(--color-bittersweet);
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 52px;
+  @media (min-width: 768px) {
+    grid-row: 1 / -1;
+    grid-column: ${({ direction }) => direction === 'reverse' ? ` 1 / span 1`  : `2 / span 1`};    
   }
 `;
 
 const Projects = ({ className }) => (
   <Wrapper className={className}>
-    <Title>Projects.</Title>
-    <ProjectsWrapper>
-      <div>Crownd</div>
-      <div>5 Yards</div>
-      <div>EP Photography</div>
-    </ProjectsWrapper>
+    <Title>Featured Projects.</Title>
+    <Project>
+      <Copy>
+        We are a team of photographers based in London, UK who specialise in documenting those moments that will live on in the memory for a lifetime.
+      </Copy>
+      <Image>
+        Crownd
+      </Image>
+    </Project>
+    <Project>
+      <Copy direction="reverse">
+        We are a team of photographers based in London, UK who specialise in documenting those moments that will live on in the memory for a lifetime.
+      </Copy>
+      <Image direction="reverse">
+        5 Yards
+      </Image>
+    </Project>
+    <Project>
+      <Copy>
+        We are a team of photographers based in London, UK who specialise in documenting those moments that will live on in the memory for a lifetime.
+      </Copy>
+      <Image>
+        EP Photography
+      </Image>
+    </Project>
   </Wrapper>
 );
 

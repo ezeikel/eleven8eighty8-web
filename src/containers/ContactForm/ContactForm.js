@@ -24,9 +24,6 @@ const Fieldset = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
   grid-row-gap: var(--spacing-medium);
-  input, textarea {
-    border-radius: var(--default-border-radius);
-  }
 `;
 
 const Label = styled.label`

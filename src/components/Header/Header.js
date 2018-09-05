@@ -43,6 +43,7 @@ class Header extends Component {
   toggleActive = () => {
     const action = !this.state.active ? 'add' : 'remove';
     document.body.classList[action]('no-scroll');
+    document.documentElement.classList[action]('no-scroll');
 
     this.setState({
       active: !this.state.active
