@@ -34,7 +34,7 @@ const SocialLinks = () => (
     <li><a href="https://twitter.com/eleven8eighty8"><Twitter /></a></li>
     <li><a href="https://facebook.com/eleven8eighty8"><Facebook /></a></li>
     <li><a href="https://instagram.com/eleven8eighty8"><Instagram /></a></li>
-    <li><a href="https://linkedin.com/eleven8eighty8"><LinkedIn /></a></li>
+    <li><a href="https://www.linkedin.com/company/eleven-8eighty8/"><LinkedIn /></a></li>
   </Wrapper>
 );
 

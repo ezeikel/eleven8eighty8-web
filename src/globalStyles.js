@@ -19,6 +19,7 @@ export default injectGlobal`
   --color-red: #E74C3C;
   --color-green: #2ECC71;
   --color-grey: #BDC3C7;
+  --color-ep-photography: #E7995C;
 
   /* Spacing */
   --spacing-tiny: 4px;
